@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://n5utjioxfabc"]
+
+[ext_resource type="PackedScene" uid="uid://bvhnasgl6vfa1" path="res://scenes/tic.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://bn46h23sok611" path="res://scenes/game.gd" id="1_yqjtg"]
+
+[node name="game" type="Node2D" unique_id=1881206644]
+script = ExtResource("1_yqjtg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=576315928]
+offset_right = 1152.0
+offset_bottom = 640.0
+color = Color(0.14252189, 0.07298351, 0.23508331, 1)
+
+[node name="Board" type="Node2D" parent="." unique_id=471618997]
+
+[node name="Lines" type="Node2D" parent="Board" unique_id=1891155387]
+
+[node name="Line2D" type="Line2D" parent="Board/Lines" unique_id=540920398]
+points = PackedVector2Array(384, 128, 384, 512)
+
+[node name="Line2D2" type="Line2D" parent="Board/Lines" unique_id=972305182]
+position = Vector2(128, 0)
+points = PackedVector2Array(384, 128, 384, 512)
+
+[node name="Line2D3" type="Line2D" parent="Board/Lines" unique_id=703138588]
+position = Vector2(256, 0)
+points = PackedVector2Array(384, 128, 384, 512)
+
+[node name="Line2D4" type="Line2D" parent="Board/Lines" unique_id=657067141]
+position = Vector2(384, 0)
+points = PackedVector2Array(384, 128, 384, 512)
+
+[node name="Line2D5" type="Line2D" parent="Board/Lines" unique_id=1125251568]
+points = PackedVector2Array(384, 256, 768, 256)
+
+[node name="Line2D6" type="Line2D" parent="Board/Lines" unique_id=1145425639]
+position = Vector2(0, 128)
+points = PackedVector2Array(384, 256, 768, 256)
+
+[node name="Line2D7" type="Line2D" parent="Board/Lines" unique_id=814256262]
+position = Vector2(0, 256)
+points = PackedVector2Array(384, 256, 768, 256)
+
+[node name="Line2D8" type="Line2D" parent="Board/Lines" unique_id=1867486735]
+position = Vector2(0, 256)
+points = PackedVector2Array(378.9972, 255.98929, 772.9777, 256.01324)
+
+[node name="Line2D9" type="Line2D" parent="Board/Lines" unique_id=1673400328]
+position = Vector2(0, -128)
+points = PackedVector2Array(378.9972, 255.98929, 772.9777, 256.01324)
+
+[node name="ButtonGrid" type="Node2D" parent="Board" unique_id=530395668]
+
+[node name="TicBox0" parent="Board/ButtonGrid" unique_id=265010009 instance=ExtResource("1_uwrxv")]
+position = Vector2(392, 120)
+
+[node name="TicBox1" parent="Board/ButtonGrid" unique_id=549636605 instance=ExtResource("1_uwrxv")]
+position = Vector2(520, 120)
+cell_num = 1
+
+[node name="TicBox2" parent="Board/ButtonGrid" unique_id=1827118316 instance=ExtResource("1_uwrxv")]
+position = Vector2(648, 120)
+cell_num = 2
+
+[node name="TicBox3" parent="Board/ButtonGrid" unique_id=1081347801 instance=ExtResource("1_uwrxv")]
+position = Vector2(392, 248)
+cell_num = 3
+
+[node name="TicBox4" parent="Board/ButtonGrid" unique_id=1275235866 instance=ExtResource("1_uwrxv")]
+position = Vector2(520, 248)
+cell_num = 4
+
+[node name="TicBox5" parent="Board/ButtonGrid" unique_id=2454987 instance=ExtResource("1_uwrxv")]
+position = Vector2(648, 248)
+cell_num = 5
+
+[node name="TicBox6" parent="Board/ButtonGrid" unique_id=1200699166 instance=ExtResource("1_uwrxv")]
+position = Vector2(392, 376)
+cell_num = 6
+
+[node name="TicBox7" parent="Board/ButtonGrid" unique_id=1184348992 instance=ExtResource("1_uwrxv")]
+position = Vector2(520, 376)
+cell_num = 7
+
+[node name="TicBox8" parent="Board/ButtonGrid" unique_id=1237324011 instance=ExtResource("1_uwrxv")]
+position = Vector2(648, 376)
+cell_num = 8
+
+[node name="header_text" type="Label" parent="." unique_id=1822104296]
+offset_left = 384.0
+offset_top = 32.0
+offset_right = 768.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 32
+text = "PlaceHolder Label"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="quit_button" type="Button" parent="." unique_id=1997456406]
+offset_left = 616.0
+offset_top = 560.0
+offset_right = 744.0
+offset_bottom = 600.0
+text = "Quit"
+
+[node name="restart_button" type="Button" parent="." unique_id=1612371122]
+offset_left = 408.0
+offset_top = 560.0
+offset_right = 536.0
+offset_bottom = 600.0
+text = "Restart"
+
+[connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="restart_button" to="." method="_on_restart_button_pressed"]

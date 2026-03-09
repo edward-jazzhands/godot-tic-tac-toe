@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://uvm5e5g10r6q"]
+
+[ext_resource type="Script" uid="uid://cemijo76b04l7" path="res://scenes/menu.gd" id="1_yqeox"]
+
+[node name="Menu_Screen" type="Node2D" unique_id=622857496]
+script = ExtResource("1_yqeox")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=766267789]
+offset_right = 1152.0
+offset_bottom = 640.0
+color = Color(0.14252189, 0.07298351, 0.23508331, 1)
+
+[node name="Title" type="Label" parent="." unique_id=328434198]
+offset_left = 232.0
+offset_top = 72.0
+offset_right = 989.0
+offset_bottom = 251.0
+theme_override_font_sizes/font_size = 64
+text = "Yo its some fuckin
+Tic Tac Toe mothafuckas"
+
+[node name="Control" type="Control" parent="." unique_id=1541579260]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 424.0
+offset_top = 288.0
+offset_right = 728.0
+offset_bottom = 624.0
+
+[node name="new_game" type="Button" parent="Control" unique_id=866038856]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 288.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 48
+text = "New Game"
+
+[node name="options" type="Button" parent="Control" unique_id=1643947312]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 120.0
+offset_right = 288.0
+offset_bottom = 195.0
+theme_override_font_sizes/font_size = 48
+text = "Options"
+
+[node name="quit" type="Button" parent="Control" unique_id=1211890783]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 232.0
+offset_right = 288.0
+offset_bottom = 307.0
+theme_override_font_sizes/font_size = 48
+text = "Quit"
+
+[connection signal="pressed" from="Control/new_game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Control/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Control/quit" to="." method="_on_quit_pressed"]

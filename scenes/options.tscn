@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dpkquuvt4jv8p"]
+
+[ext_resource type="Script" uid="uid://st22lk1l4qt4" path="res://scenes/options.gd" id="1_c2u1v"]
+
+[node name="options" type="Node2D" unique_id=1854715904]
+script = ExtResource("1_c2u1v")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2027726577]
+offset_right = 1152.0
+offset_bottom = 640.0
+color = Color(0.14252189, 0.07298351, 0.23508331, 1)
+
+[node name="Title" type="Label" parent="." unique_id=813726241]
+offset_left = 256.0
+offset_top = 136.0
+offset_right = 1013.0
+offset_bottom = 406.0
+theme_override_font_sizes/font_size = 64
+text = "There are no options
+Bro wtf do you think
+this is"
+
+[node name="options" type="Button" parent="." unique_id=1362071184]
+offset_left = 440.0
+offset_top = 448.0
+offset_right = 712.0
+offset_bottom = 523.0
+theme_override_font_sizes/font_size = 48
+text = "Go back"
+
+[connection signal="pressed" from="options" to="." method="_on_options_pressed"]

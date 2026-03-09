@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bvhnasgl6vfa1"]
+
+[ext_resource type="Script" uid="uid://ccd35tuikp3o0" path="res://scenes/tic.gd" id="1_xo1rw"]
+
+[node name="TicBox" type="Node2D" unique_id=265010009]
+script = ExtResource("1_xo1rw")
+
+[node name="Button" type="Button" parent="." unique_id=1858800027]
+offset_top = 16.0
+offset_right = 112.0
+offset_bottom = 128.0
+
+[node name="Label" type="Label" parent="." unique_id=1642231978]
+offset_right = 112.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 96
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
